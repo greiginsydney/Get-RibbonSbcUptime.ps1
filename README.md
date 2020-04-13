@@ -42,9 +42,7 @@ If you add the "-AsTimeString" switch the script will output a literal version o
 ### Automation
 If you're automating this script, you can capture its output into a variable to review in subsequent handling. If you ARE doing this, make sure you add the "-SkipUpdateCheck" switch, otherwise an update to the script will derail  the automation:
 
-```powershell
-PS C:\> $SbcUptime = (.\Get-RibbonSbcUptime.ps1 -SbcFQDN 10.10.16.82 -RestLogin REST -RestPassword P@ssw0rd1 -Verbose <b>-SkipUpdateCheck</b>
-```
+<pre>PS C:\> $SbcUptime = (.\Get-RibbonSbcUptime.ps1 -SbcFQDN 10.10.16.82 -RestLogin REST -RestPassword P@ssw0rd1 -Verbose <strong>-SkipUpdateCheck</strong></pre>
 
 ### Known Issue
 SBC firmware versions prior to v8.0.3 have a known bug: the CpuUptime reports zero. This is not a problem with the script. If the script reports zero but system/Overview reports an expected value, you'll need to update the SBC's  firmware.
@@ -53,5 +51,10 @@ SBC firmware versions prior to v8.0.3 have a known bug: the CpuUptime reports ze
 1.0 - 16th November 2019.
 - This is the initial release.
 
+<br>
 
 \- G.
+
+<br>
+
+This script was originally published at [https://greiginsydney.com/get-ribbonsbcuptime-ps1/](https://greiginsydney.com/get-ribbonsbcuptime-ps1/).
