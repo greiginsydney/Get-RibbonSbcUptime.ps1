@@ -1,7 +1,7 @@
 # Get-RibbonSbcUptime.ps1
 Query your Ribbon SBC to see how long it's been running.
 
-**This version is v1.0 - 16th November 2019.**
+**This version is v1.1 - 23rd October 2021.**
 
 Get-RibbonSbcUptime.ps1 invokes a REST login to your Sonus/Ribbon SBC 1k/2k/SWe-Lite and reports how long it's been running: the CpuUptime.
 
@@ -48,9 +48,13 @@ If you're automating this script, you can capture its output into a variable to 
 SBC firmware versions prior to v8.0.3 have a known bug: the CpuUptime reports zero. This is not a problem with the script. If the script reports zero but system/Overview reports an expected value, you'll need to update the SBC's  firmware.
 
 ### Revision History
-1.0 - 16th November 2019.
-- This is the initial release.
+v1.1: 23rd October 2021
 
+   - Changed fn 'BasicHandler' to accept varying 'xml' responses from the SBC
+
+v1.0: 16th November 2019
+
+   - This is the initial release
 <br>
 
 \- G.
